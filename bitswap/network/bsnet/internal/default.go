@@ -6,13 +6,13 @@ import (
 
 var (
 	// ProtocolBitswapNoVers is equivalent to the legacy bitswap protocol
-	ProtocolBitswapNoVers protocol.ID = "/ipfs/bitswap"
+	ProtocolBitswapNoVers protocol.ID = "/wwfs/bitswap"
 	// ProtocolBitswapOneZero is the prefix for the legacy bitswap protocol
-	ProtocolBitswapOneZero protocol.ID = "/ipfs/bitswap/1.0.0"
+	ProtocolBitswapOneZero protocol.ID = "/wwfs/bitswap/1.0.0"
 	// ProtocolBitswapOneOne is the prefix for version 1.1.0
-	ProtocolBitswapOneOne protocol.ID = "/ipfs/bitswap/1.1.0"
+	ProtocolBitswapOneOne protocol.ID = "/wwfs/bitswap/1.1.0"
 	// ProtocolBitswap is the current version of the bitswap protocol: 1.2.0
-	ProtocolBitswap protocol.ID = "/ipfs/bitswap/1.2.0"
+	ProtocolBitswap protocol.ID = "/wwfs/bitswap/1.2.0"
 )
 
 var DefaultProtocols = []protocol.ID{
