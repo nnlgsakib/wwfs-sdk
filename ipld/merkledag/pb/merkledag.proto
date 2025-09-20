@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package wwfs.ipld.merkledag.pb;
 
-option go_package = "github.com/ipfs/boxo/ipld/merkledag/pb";
+option go_package = "github.com/nnlgsakib/wwfs-sdk/ipld/merkledag/pb";
 
 // An IPFS MerkleDAG Link
 message PBLink {

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package wwfs.filestore.pb;
 
-option go_package = "github.com/ipfs/boxo/filestore/pb";
+option go_package = "github.com/nnlgsakib/wwfs-sdk/filestore/pb";
 
 message DataObj {
         optional string FilePath = 1;

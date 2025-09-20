@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package wwfs.bitswap.message.v1.pb;
 
-option go_package = "github.com/ipfs/boxo/bitswap/message/pb";
+option go_package = "github.com/nnlgsakib/wwfs-sdk/bitswap/message/pb";
 
 message Message {
   message Wantlist {

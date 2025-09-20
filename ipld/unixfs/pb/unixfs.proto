@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package wwfs.ipld.unixfs.pb;
 
-option go_package = "github.com/ipfs/boxo/ipld/unixfs/pb";
+option go_package = "github.com/nnlgsakib/wwfs-sdk/ipld/unixfs/pb";
 
 message Data {
 	enum DataType {
