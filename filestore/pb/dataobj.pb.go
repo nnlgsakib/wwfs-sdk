@@ -116,7 +116,7 @@ func file_github_com_ipfs_boxo_filestore_pb_dataobj_proto_rawDescGZIP() []byte {
 
 var file_github_com_ipfs_boxo_filestore_pb_dataobj_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_github_com_ipfs_boxo_filestore_pb_dataobj_proto_goTypes = []any{
-	(*DataObj)(nil), // 0: ipfs.boxo.filestore.pb.DataObj
+	(*DataObj)(nil), // 0: wwfs.filestore.pb.DataObj
 }
 var file_github_com_ipfs_boxo_filestore_pb_dataobj_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type

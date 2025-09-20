@@ -7,10 +7,11 @@
 package pb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -90,7 +91,7 @@ func (Data_DataType) EnumDescriptor() ([]byte, []int) {
 
 type Data struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Type          *Data_DataType         `protobuf:"varint,1,req,name=Type,enum=ipfs.boxo.ipld.unixfs.pb.Data_DataType" json:"Type,omitempty"`
+	Type          *Data_DataType         `protobuf:"varint,1,req,name=Type,enum=wwfs.ipld.unixfs.pb.Data_DataType" json:"Type,omitempty"`
 	Data          []byte                 `protobuf:"bytes,2,opt,name=Data" json:"Data,omitempty"`
 	Filesize      *uint64                `protobuf:"varint,3,opt,name=filesize" json:"filesize,omitempty"`
 	Blocksizes    []uint64               `protobuf:"varint,4,rep,name=blocksizes" json:"blocksizes,omitempty"`
@@ -351,14 +352,14 @@ func file_github_com_ipfs_boxo_ipld_unixfs_pb_unixfs_proto_rawDescGZIP() []byte 
 var file_github_com_ipfs_boxo_ipld_unixfs_pb_unixfs_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_github_com_ipfs_boxo_ipld_unixfs_pb_unixfs_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_github_com_ipfs_boxo_ipld_unixfs_pb_unixfs_proto_goTypes = []any{
-	(Data_DataType)(0),    // 0: ipfs.boxo.ipld.unixfs.pb.Data.DataType
-	(*Data)(nil),          // 1: ipfs.boxo.ipld.unixfs.pb.Data
-	(*Metadata)(nil),      // 2: ipfs.boxo.ipld.unixfs.pb.Metadata
-	(*IPFSTimestamp)(nil), // 3: ipfs.boxo.ipld.unixfs.pb.IPFSTimestamp
+	(Data_DataType)(0),    // 0: wwfs.ipld.unixfs.pb.Data.DataType
+	(*Data)(nil),          // 1: wwfs.ipld.unixfs.pb.Data
+	(*Metadata)(nil),      // 2: wwfs.ipld.unixfs.pb.Metadata
+	(*IPFSTimestamp)(nil), // 3: wwfs.ipld.unixfs.pb.IPFSTimestamp
 }
 var file_github_com_ipfs_boxo_ipld_unixfs_pb_unixfs_proto_depIdxs = []int32{
-	0, // 0: ipfs.boxo.ipld.unixfs.pb.Data.Type:type_name -> ipfs.boxo.ipld.unixfs.pb.Data.DataType
-	3, // 1: ipfs.boxo.ipld.unixfs.pb.Data.mtime:type_name -> ipfs.boxo.ipld.unixfs.pb.IPFSTimestamp
+	0, // 0: wwfs.ipld.unixfs.pb.Data.Type:type_name -> wwfs.ipld.unixfs.pb.Data.DataType
+	3, // 1: wwfs.ipld.unixfs.pb.Data.mtime:type_name -> wwfs.ipld.unixfs.pb.IPFSTimestamp
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

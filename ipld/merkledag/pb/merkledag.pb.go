@@ -186,11 +186,11 @@ func file_github_com_ipfs_boxo_ipld_merkledag_pb_merkledag_proto_rawDescGZIP() [
 
 var file_github_com_ipfs_boxo_ipld_merkledag_pb_merkledag_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_github_com_ipfs_boxo_ipld_merkledag_pb_merkledag_proto_goTypes = []any{
-	(*PBLink)(nil), // 0: ipfs.boxo.ipld.merkledag.pb.PBLink
-	(*PBNode)(nil), // 1: ipfs.boxo.ipld.merkledag.pb.PBNode
+	(*PBLink)(nil), // 0: wwfs.ipld.merkledag.pb.PBLink
+	(*PBNode)(nil), // 1: wwfs.ipld.merkledag.pb.PBNode
 }
 var file_github_com_ipfs_boxo_ipld_merkledag_pb_merkledag_proto_depIdxs = []int32{
-	0, // 0: ipfs.boxo.ipld.merkledag.pb.PBNode.Links:type_name -> ipfs.boxo.ipld.merkledag.pb.PBLink
+	0, // 0: wwfs.ipld.merkledag.pb.PBNode.Links:type_name -> wwfs.ipld.merkledag.pb.PBLink
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

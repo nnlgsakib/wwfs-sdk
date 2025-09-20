@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ipfs.boxo.ipns.pb;
+package wwfs.ipns.pb;
 
 option go_package = "github.com/nnlgsakib/wwfs-sdk";
 

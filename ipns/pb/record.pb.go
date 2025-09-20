@@ -7,10 +7,11 @@
 package pb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -69,7 +70,7 @@ type IpnsRecord struct {
 	// 1-6 are legacy fields used only in V1+V2 records
 	Value        []byte                   `protobuf:"bytes,1,opt,name=value,proto3,oneof" json:"value,omitempty"`
 	SignatureV1  []byte                   `protobuf:"bytes,2,opt,name=signatureV1,proto3,oneof" json:"signatureV1,omitempty"`
-	ValidityType *IpnsRecord_ValidityType `protobuf:"varint,3,opt,name=validityType,proto3,enum=ipfs.boxo.ipns.pb.IpnsRecord_ValidityType,oneof" json:"validityType,omitempty"`
+	ValidityType *IpnsRecord_ValidityType `protobuf:"varint,3,opt,name=validityType,proto3,enum=wwfs.ipns.pb.IpnsRecord_ValidityType,oneof" json:"validityType,omitempty"`
 	Validity     []byte                   `protobuf:"bytes,4,opt,name=validity,proto3,oneof" json:"validity,omitempty"`
 	Sequence     *uint64                  `protobuf:"varint,5,opt,name=sequence,proto3,oneof" json:"sequence,omitempty"`
 	Ttl          *uint64                  `protobuf:"varint,6,opt,name=ttl,proto3,oneof" json:"ttl,omitempty"`
@@ -231,11 +232,11 @@ func file_github_com_ipfs_boxo_ipns_pb_record_proto_rawDescGZIP() []byte {
 var file_github_com_ipfs_boxo_ipns_pb_record_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_github_com_ipfs_boxo_ipns_pb_record_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_github_com_ipfs_boxo_ipns_pb_record_proto_goTypes = []any{
-	(IpnsRecord_ValidityType)(0), // 0: ipfs.boxo.ipns.pb.IpnsRecord.ValidityType
-	(*IpnsRecord)(nil),           // 1: ipfs.boxo.ipns.pb.IpnsRecord
+	(IpnsRecord_ValidityType)(0), // 0: wwfs.ipns.pb.IpnsRecord.ValidityType
+	(*IpnsRecord)(nil),           // 1: wwfs.ipns.pb.IpnsRecord
 }
 var file_github_com_ipfs_boxo_ipns_pb_record_proto_depIdxs = []int32{
-	0, // 0: ipfs.boxo.ipns.pb.IpnsRecord.validityType:type_name -> ipfs.boxo.ipns.pb.IpnsRecord.ValidityType
+	0, // 0: wwfs.ipns.pb.IpnsRecord.validityType:type_name -> wwfs.ipns.pb.IpnsRecord.ValidityType
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

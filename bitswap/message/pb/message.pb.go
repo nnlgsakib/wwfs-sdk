@@ -7,10 +7,11 @@
 package pb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -295,7 +296,7 @@ func (x *Message_Block) GetData() []byte {
 type Message_BlockPresence struct {
 	state         protoimpl.MessageState    `protogen:"open.v1"`
 	Cid           []byte                    `protobuf:"bytes,1,opt,name=cid,proto3" json:"cid,omitempty"`
-	Type          Message_BlockPresenceType `protobuf:"varint,2,opt,name=type,proto3,enum=ipfs.boxo.bitswap.message.v1.pb.Message_BlockPresenceType" json:"type,omitempty"`
+	Type          Message_BlockPresenceType `protobuf:"varint,2,opt,name=type,proto3,enum=wwfs.bitswap.message.v1.pb.Message_BlockPresenceType" json:"type,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -346,11 +347,11 @@ func (x *Message_BlockPresence) GetType() Message_BlockPresenceType {
 
 type Message_Wantlist_Entry struct {
 	state         protoimpl.MessageState    `protogen:"open.v1"`
-	Block         []byte                    `protobuf:"bytes,1,opt,name=block,proto3" json:"block,omitempty"`                                                                       // the block cid (cidV0 in bitswap 1.0.0, cidV1 in bitswap 1.1.0)
-	Priority      int32                     `protobuf:"varint,2,opt,name=priority,proto3" json:"priority,omitempty"`                                                                // the priority (normalized). default to 1
-	Cancel        bool                      `protobuf:"varint,3,opt,name=cancel,proto3" json:"cancel,omitempty"`                                                                    // whether this revokes an entry
-	WantType      Message_Wantlist_WantType `protobuf:"varint,4,opt,name=wantType,proto3,enum=ipfs.boxo.bitswap.message.v1.pb.Message_Wantlist_WantType" json:"wantType,omitempty"` // Note: defaults to enum 0, ie Block
-	SendDontHave  bool                      `protobuf:"varint,5,opt,name=sendDontHave,proto3" json:"sendDontHave,omitempty"`                                                        // Note: defaults to false
+	Block         []byte                    `protobuf:"bytes,1,opt,name=block,proto3" json:"block,omitempty"`                                                                  // the block cid (cidV0 in bitswap 1.0.0, cidV1 in bitswap 1.1.0)
+	Priority      int32                     `protobuf:"varint,2,opt,name=priority,proto3" json:"priority,omitempty"`                                                           // the priority (normalized). default to 1
+	Cancel        bool                      `protobuf:"varint,3,opt,name=cancel,proto3" json:"cancel,omitempty"`                                                               // whether this revokes an entry
+	WantType      Message_Wantlist_WantType `protobuf:"varint,4,opt,name=wantType,proto3,enum=wwfs.bitswap.message.v1.pb.Message_Wantlist_WantType" json:"wantType,omitempty"` // Note: defaults to enum 0, ie Block
+	SendDontHave  bool                      `protobuf:"varint,5,opt,name=sendDontHave,proto3" json:"sendDontHave,omitempty"`                                                   // Note: defaults to false
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -505,21 +506,21 @@ func file_github_com_ipfs_boxo_bitswap_message_pb_message_proto_rawDescGZIP() []
 var file_github_com_ipfs_boxo_bitswap_message_pb_message_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_github_com_ipfs_boxo_bitswap_message_pb_message_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_github_com_ipfs_boxo_bitswap_message_pb_message_proto_goTypes = []any{
-	(Message_BlockPresenceType)(0), // 0: ipfs.boxo.bitswap.message.v1.pb.Message.BlockPresenceType
-	(Message_Wantlist_WantType)(0), // 1: ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.WantType
-	(*Message)(nil),                // 2: ipfs.boxo.bitswap.message.v1.pb.Message
-	(*Message_Wantlist)(nil),       // 3: ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist
-	(*Message_Block)(nil),          // 4: ipfs.boxo.bitswap.message.v1.pb.Message.Block
-	(*Message_BlockPresence)(nil),  // 5: ipfs.boxo.bitswap.message.v1.pb.Message.BlockPresence
-	(*Message_Wantlist_Entry)(nil), // 6: ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.Entry
+	(Message_BlockPresenceType)(0), // 0: wwfs.bitswap.message.v1.pb.Message.BlockPresenceType
+	(Message_Wantlist_WantType)(0), // 1: wwfs.bitswap.message.v1.pb.Message.Wantlist.WantType
+	(*Message)(nil),                // 2: wwfs.bitswap.message.v1.pb.Message
+	(*Message_Wantlist)(nil),       // 3: wwfs.bitswap.message.v1.pb.Message.Wantlist
+	(*Message_Block)(nil),          // 4: wwfs.bitswap.message.v1.pb.Message.Block
+	(*Message_BlockPresence)(nil),  // 5: wwfs.bitswap.message.v1.pb.Message.BlockPresence
+	(*Message_Wantlist_Entry)(nil), // 6: wwfs.bitswap.message.v1.pb.Message.Wantlist.Entry
 }
 var file_github_com_ipfs_boxo_bitswap_message_pb_message_proto_depIdxs = []int32{
-	3, // 0: ipfs.boxo.bitswap.message.v1.pb.Message.wantlist:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist
-	4, // 1: ipfs.boxo.bitswap.message.v1.pb.Message.payload:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.Block
-	5, // 2: ipfs.boxo.bitswap.message.v1.pb.Message.blockPresences:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.BlockPresence
-	6, // 3: ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.entries:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.Entry
-	0, // 4: ipfs.boxo.bitswap.message.v1.pb.Message.BlockPresence.type:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.BlockPresenceType
-	1, // 5: ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.Entry.wantType:type_name -> ipfs.boxo.bitswap.message.v1.pb.Message.Wantlist.WantType
+	3, // 0: wwfs.bitswap.message.v1.pb.Message.wantlist:type_name -> wwfs.bitswap.message.v1.pb.Message.Wantlist
+	4, // 1: wwfs.bitswap.message.v1.pb.Message.payload:type_name -> wwfs.bitswap.message.v1.pb.Message.Block
+	5, // 2: wwfs.bitswap.message.v1.pb.Message.blockPresences:type_name -> wwfs.bitswap.message.v1.pb.Message.BlockPresence
+	6, // 3: wwfs.bitswap.message.v1.pb.Message.Wantlist.entries:type_name -> wwfs.bitswap.message.v1.pb.Message.Wantlist.Entry
+	0, // 4: wwfs.bitswap.message.v1.pb.Message.BlockPresence.type:type_name -> wwfs.bitswap.message.v1.pb.Message.BlockPresenceType
+	1, // 5: wwfs.bitswap.message.v1.pb.Message.Wantlist.Entry.wantType:type_name -> wwfs.bitswap.message.v1.pb.Message.Wantlist.WantType
 	6, // [6:6] is the sub-list for method output_type
 	6, // [6:6] is the sub-list for method input_type
 	6, // [6:6] is the sub-list for extension type_name
