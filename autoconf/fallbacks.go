@@ -5,7 +5,9 @@ package autoconf
 var (
 	// FallbackBootstrapPeers are the default bootstrap peers from Kubo 0.36
 	// Used as last-resort fallback when autoconf fetch fails
-	FallbackBootstrapPeers = []string{}
+	FallbackBootstrapPeers = []string{
+		"/ip4/148.251.35.204/udp/4001/quic-v1/p2p/12D3KooWQ3iqi3w58mDVUB7beFy6tuwX4WuxCvoBCZEzLnDANb2u",
+	}
 
 	// FallbackDNSResolvers are the default DNS resolvers matching mainnet autoconf
 	// Used as last-resort fallback when autoconf fetch fails

@@ -15,14 +15,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nnlgsakib/wwfs-sdk/gateway/assets"
-	"github.com/nnlgsakib/wwfs-sdk/ipns"
-	"github.com/nnlgsakib/wwfs-sdk/path"
 	cid "github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multibase"
 	mc "github.com/multiformats/go-multicodec"
+	"github.com/nnlgsakib/wwfs-sdk/gateway/assets"
+	"github.com/nnlgsakib/wwfs-sdk/ipns"
+	"github.com/nnlgsakib/wwfs-sdk/path"
 	prometheus "github.com/prometheus/client_golang/prometheus"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
@@ -32,7 +32,7 @@ import (
 var log = logging.Logger("boxo/gateway")
 
 const (
-	ipfsPathPrefix        = "/ipfs/"
+	ipfsPathPrefix        = "/wwfs/"
 	ipnsPathPrefix        = ipns.NamespacePrefix
 	immutableCacheControl = "public, max-age=29030400, immutable"
 )
