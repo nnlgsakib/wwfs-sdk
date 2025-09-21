@@ -59,7 +59,7 @@ func NewHandler(gwAPI gateway.IPFSBackend) http.Handler {
 	// to add prometheus metrics, hence needing the mux.
 	gwHandler := gateway.NewHandler(conf, gwAPI)
 	mux := http.NewServeMux()
-	mux.Handle("/wwfs/", gwHandler)
+	mux.Handle("/ipfs/", gwHandler)
 	mux.Handle("/ipns/", gwHandler)
 
 	// Serves prometheus metrics alongside the gateway. This step is optional and

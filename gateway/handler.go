@@ -32,7 +32,7 @@ import (
 var log = logging.Logger("boxo/gateway")
 
 const (
-	ipfsPathPrefix        = "/wwfs/"
+	ipfsPathPrefix        = "/ipfs/"
 	ipnsPathPrefix        = ipns.NamespacePrefix
 	immutableCacheControl = "public, max-age=29030400, immutable"
 )
