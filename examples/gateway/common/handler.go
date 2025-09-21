@@ -28,7 +28,7 @@ func NewHandler(gwAPI gateway.IPFSBackend) http.Handler {
 		PublicGateways: map[string]*gateway.PublicGateway{
 			// Support public requests with Host: CID.ipfs.example.net and ID.ipns.example.net
 			"example.net": {
-				Paths:         []string{"/ipfs", "/ipns"},
+				Paths:         []string{"/wwfs", "/ipns"},
 				NoDNSLink:     false,
 				UseSubdomains: true,
 				// This subdomain gateway is used for testing and therefore we make non-trustless requests.
@@ -36,7 +36,7 @@ func NewHandler(gwAPI gateway.IPFSBackend) http.Handler {
 			},
 			// Support local requests
 			"localhost": {
-				Paths:         []string{"/ipfs", "/ipns"},
+				Paths:         []string{"/wwfs", "/ipns"},
 				NoDNSLink:     false,
 				UseSubdomains: true,
 				// Localhost is considered trusted, ok to allow deserialized responses
@@ -59,7 +59,7 @@ func NewHandler(gwAPI gateway.IPFSBackend) http.Handler {
 	// to add prometheus metrics, hence needing the mux.
 	gwHandler := gateway.NewHandler(conf, gwAPI)
 	mux := http.NewServeMux()
-	mux.Handle("/ipfs/", gwHandler)
+	mux.Handle("/wwfs/", gwHandler)
 	mux.Handle("/ipns/", gwHandler)
 
 	// Serves prometheus metrics alongside the gateway. This step is optional and
